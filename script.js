@@ -16,7 +16,7 @@ let secondCard = false;
 //Items array
 const items = [
     { name: "hidrocarboneto1", sprites: ["Butano.png", "Butano Escrito.png"] },
-    { name: "hidrocarboneto2", sprites: ["2,5-dimetil-hexa-1,3-dieno.png", "2,5 Escrito.png"] },
+    { name: "hidrocarboneto2", sprites: ["2,5-dimetil-hexa-1,3-dieno.png", "2,5 ESCRITO.png"] },
     { name: "hidrocarboneto3", sprites: ["M-xileno.png", "M-Xileno Escrito.png"] },
     { name: "hidrocarboneto4", sprites: ["Hex-2,4-dieno.png", "Hex-2,4-dieno Escrito.png"] },
     { name: "hidrocarboneto5", sprites: ["3-Etil-Metil-Hex-1-Eno.png", "3-Etil-Metil-Hex-1-Eno Escrito.png"] },
