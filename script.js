@@ -12,6 +12,8 @@ let cards;
 let interval;
 let firstCard = false;
 let secondCard = false;
+let tempoInicio = new Date().getTime();
+
 
 //Items array
 const items = [
@@ -133,6 +135,17 @@ secondCard.isFlipped = false;
     result.innerHTML = `<h2>Você Venceu!</h2>
       <h4>Moves: ${movesCount}</h4>`;
     stopGame();
+    controls.classList.remove("hide");
+  stopButton.classList.add("hide");
+  startButton.classList.remove("hide");
+  clearInterval(interval);
+  let endTime = new Date().getTime();
+  let totalTimeSeconds = (endTime - tempoInicio) / 1000;
+  let minutesValue = Math.floor(totalTimeSeconds / 60);
+  let secondsValue = String(totalTimeSeconds % 60).padStart(2, '0');
+  result.innerHTML = `<h2>Você Venceu!</h2>
+    <h4>Moves: ${movesCount}</h4>
+    <h4>Tempo: ${minutesValue}:${secondsValue}</h4>`;
   }, 2000); // delay de 2 segundos
 }
           } else {
