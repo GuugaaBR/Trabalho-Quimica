@@ -113,7 +113,7 @@ button {
   background-color: #4d4d4d;
   color: #ffffff;
   position: relative; /* importante para que o z-index funcione */
-z-index: 1; /* botão está na frente do background */
+z-index: 3; /* botão está na frente do background */
 }
 
 .controls-container button {
@@ -130,11 +130,12 @@ z-index: 1; /* botão está na frente do background */
 }
 
 #result h2 {
-  font-size: 2.5em;
-  color: #ffffff;
+  font-size: 4.5em;
+  color: #00ff26;
+  margin-top: -170px ;
   text-shadow: 2px 5px #00000020;
   position: relative; /* importante para que o z-index funcione */
-z-index: 1; /* botão está na frente do background */
+  z-index: 2; /* botão está na frente do background */
 }
 
 #result h4 {
@@ -145,7 +146,9 @@ z-index: 1; /* botão está na frente do background */
   right: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url("Fundo.jpg"); /* substitua com o caminho da sua imagem */
+  z-index: 1;
+  color: #ff3232;
+  background-image: url("Fundo.jpeg"); /* substitua com o caminho da sua imagem */
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -159,4 +162,9 @@ z-index: 1; /* botão está na frente do background */
   left: 0; /* Move o texto para a esquerda */
   font-size: 1.2em;
   color: #333;
+}
+#result h6 {
+  color: #00ff26;
+  z-index: 3;
+  margin-top: 150px;
 }
