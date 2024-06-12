@@ -162,7 +162,7 @@ z-index: 3; /* botão está na frente do background */
   position: absolute; /* Posiciona o elemento absolutamente */
   top: 0; /* Move o texto para o topo */
   left: 0; /* Move o texto para a esquerda */
-  font-size: 1.2em;
+  font-size: 0.7em;
   color: #333;
 }
 #result h6 {
@@ -171,3 +171,49 @@ z-index: 3; /* botão está na frente do background */
   margin-top: 150px;
 }
 
+/* Adiciona media queries para telas pequenas (celulares) */
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: #bebcf8; /* Define o fundo com cor para toda a tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100vw; /* Ocupa toda a largura da tela */
+  }
+  
+  .wrapper {
+    width: 90%; /* Ajusta a largura do wrapper para ocupar mais espaço na tela */
+    padding: 1.5em 2em; /* Ajusta o padding para melhorar a legibilidade */
+  }
+   
+  .game-container {
+     grid-template-columns: repeat(2, 1fr); /* Ajusta o layout do jogo para 2 colunas */
+   }
+   
+  .card-container {
+     width: 40%; /* Ajusta a largura das cartas para ocupar mais espaço na tela */
+     height: 40%; /* Ajusta a altura das cartas para ocupar mais espaço na tela */
+   }
+   
+  .stats-container {
+     font-size: 1.2em; /* Ajusta o tamanho da fonte para melhorar a legibilidade */
+   }
+   
+  .controls-container {
+     flex-direction: column; /* Ajusta a direção do layout dos controles para vertical */
+   }
+   
+   button {
+     font-size: 1.5em; /* Ajusta o tamanho da fonte dos botões para melhorar a legibilidade */
+   }
+   
+   #result h2 {
+     font-size: 2.5em; /* Ajusta o tamanho da fonte do título do resultado para melhorar a legibilidade */
+   }
+   
+   #result h4 {
+     font-size: 1.5em; /* Ajusta o tamanho da fonte do texto do resultado para melhorar a legibilidade */
+   }
+   
+   #rules {
+     font-size: 1.5em; /* Ajusta o tamanho da fonte do texto das regras para melhorar a legibilidade */
+   }
+ }
