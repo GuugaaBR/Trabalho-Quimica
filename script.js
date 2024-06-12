@@ -143,7 +143,7 @@ secondCard.isFlipped = false;
   let endTime = new Date().getTime();
   let totalTimeSeconds = (endTime - tempoInicio) / 1000;
   let minutesValue = Math.floor(totalTimeSeconds / 60);
-    let secondsValue = Math.floor(totalTimeSeconds % 60).toString().padStart(2, '0');
+  let secondsValue = Math.floor(totalTimeSeconds % 60).toString().padStart(2, '0');
   result.innerHTML = `<h2>Você Venceu!</h2>
     <h6>Moves: ${movesCount}</h6>
     <h4>Tempo: ${minutesValue}:${secondsValue}</h4>`; 
