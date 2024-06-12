@@ -12,7 +12,8 @@ let cards;
 let interval;
 let firstCard = false;
 let secondCard = false;
-let tempoInicio = new Date().getTime();
+let gameInProgress = false;
+let intervalId = null;
 
 
 //Items array
@@ -51,6 +52,11 @@ const timeGenerator = () => {
     minutes += 1;
     seconds = 0;
   }
+  //format time before displaying
+  let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
+  let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
+  timeValue.innerHTML = `<span>Time: </span>${minutesValue}:${secondsValue}`;
+};
 
 //For calculating moves
 const movesCounter = () => {
@@ -139,8 +145,8 @@ secondCard.isFlipped = false;
   let minutesValue = Math.floor(totalTimeSeconds / 60);
   let secondsValue = String(totalTimeSeconds % 60).padStart(2, '0');
   result.innerHTML = `<h2>Você Venceu!</h2>
-    <h4>Moves: ${movesCount}</h4>
-    <h4>Tempo: ${minutesValue}:${secondsValue}</h4>`;
+    <h6>Moves: ${movesCount}</h6>
+    <h4>Tempo: ${minutesValue}:${secondsValue}</h4>`; 
   }, 2000); // delay de 2 segundos
 }
           } else {
@@ -162,20 +168,25 @@ secondCard.isFlipped = false;
   });
 };
 
+
 //Start game
 startButton.addEventListener("click", () => {
-  movesCount = 0;
-  seconds = 0;
-  minutes = 0;
-  //controls amd buttons visibility
-  controls.classList.add("hide");
-  stopButton.classList.remove("hide");
-  startButton.classList.add("hide");
-  //Start timer
-  interval = setInterval(timeGenerator, 1000);
-  //initial moves
-  moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
-  initializer();
+  if (!gameInProgress) {
+    movesCount = 0;
+    seconds = 0;
+    minutes = 0;
+    controls.classList.add("hide");
+    stopButton.classList.remove("hide");
+    startButton.classList.add("hide");
+    if (intervalId) {
+      clearInterval(intervalId); // Change this line
+    }
+    tempoInicio = new Date().getTime();
+    intervalId = setInterval(timeGenerator, 1000);
+    moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+    initializer();
+    gameInProgress = true;
+  }
 });
 
 //Stop game
@@ -185,7 +196,8 @@ stopButton.addEventListener(
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
-    clearInterval(interval);
+    clearInterval(intervalId);
+    gameInProgress = false;
   })
 );
 
