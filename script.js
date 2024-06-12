@@ -50,7 +50,6 @@ const timeGenerator = () => {
   if (seconds >= 60) {
     minutes += 1;
     seconds = 0;
-    z-index = 50;
   }
 
 //For calculating moves
