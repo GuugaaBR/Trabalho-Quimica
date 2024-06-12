@@ -17,22 +17,22 @@ let tempoInicio = new Date().getTime();
 
 //Items array
 const items = [
-    { name: "hidrocarboneto1", sprites: ["Butano.png", "Butano Escrito.png"] },
-    { name: "hidrocarboneto2", sprites: ["2,5-dimetil-hexa-1,3-dieno.png", "2,5 ESCRITO.png"] },
-    { name: "hidrocarboneto3", sprites: ["M-xileno.png", "M-Xileno Escrito.png"] },
-    { name: "hidrocarboneto4", sprites: ["Hex-2,4-dieno.png", "Hex-2,4-dieno Escrito.png"] },
-    { name: "hidrocarboneto5", sprites: ["3-Etil-Metil-Hex-1-Eno.png", "3-Etil-Metil-Hex-1-Eno Escrito.png"] },
-    { name: "hidrocarboneto6", sprites: ["Hepteno.png", "Hepteno Escrito.png"] },
-    { name: "hidrocarboneto7", sprites: ["But-2-Eno.png", "But-2-Eno Escrito.png"] },
-    { name: "hidrocarboneto8", sprites: ["Buteno.png", "Buteno Escrito.png"] },
-    { name: "hidrocarboneto9", sprites: ["Propeno.png", "Propeno Escrito.png"] },
-    { name: "hidrocarboneto10", sprites: ["P-xileno.png", "P-xileno Escrito.png"] },
-    { name: "hidrocarboneto11", sprites: ["O-xileno.png", "O-xileno Escrito.png"] },
-    { name: "hidrocarboneto12", sprites: ["Naftaleno.png", "Naftaleno Escrito.png"] },
-    { name: "hidrocarboneto13", sprites: ["Antraceno.png", "Antraceno Escrito.png"] },
-    { name: "hidrocarboneto14", sprites: ["Hept-2-ino.png", "Hept-2-ino Escrito.png"] },
-    { name: "hidrocarboneto15", sprites: ["4-metil-hept-1,5-diino.png", "4-metil-hept-1,5-diino Escrito.png"] },
-    { name: "hidrocarboneto16", sprites: ["Ciclobuteno.png", "Ciclobuteno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Butano.png", "Butano Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["2,5-dimetil-hexa-1,3-dieno.png", "2,5 ESCRITO.png"] },
+    { name: "hidrocarboneto", sprites: ["M-xileno.png", "M-Xileno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Hex-2,4-dieno.png", "Hex-2,4-dieno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["3-Etil-Metil-Hex-1-Eno.png", "3-Etil-Metil-Hex-1-Eno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Hepteno.png", "Hepteno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["But-2-Eno.png", "But-2-Eno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Buteno.png", "Buteno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Propeno.png", "Propeno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["P-xileno.png", "P-xileno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["O-xileno.png", "O-xileno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Naftaleno.png", "Naftaleno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Antraceno.png", "Antraceno Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Hept-2-ino.png", "Hept-2-ino Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["4-metil-hept-1,5-diino.png", "4-metil-hept-1,5-diino Escrito.png"] },
+    { name: "hidrocarboneto", sprites: ["Ciclobuteno.png", "Ciclobuteno Escrito.png"] },
 ];
 
 
