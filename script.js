@@ -51,7 +51,6 @@ const timeGenerator = () => {
     minutes += 1;
     seconds = 0;
     z-index = 50;
-    color = #ffffff
   }
 
 //For calculating moves
