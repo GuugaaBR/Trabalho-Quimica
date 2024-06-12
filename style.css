@@ -29,6 +29,7 @@ body {
   gap: 0.6em;
 }
 
+
 .stats-container {
   text-align: right;
   margin-bottom: 1.2em;
@@ -44,6 +45,7 @@ body {
   height: 6.25em;
   cursor: pointer;
 }
+
 
 .card-before,
 .card-after {
@@ -130,9 +132,9 @@ z-index: 3; /* botão está na frente do background */
 }
 
 #result h2 {
-  font-size: 4.5em;
+  font-size: 3.5em;
   color: #00ff26;
-  margin-top: -170px ;
+  margin-top: -147px ;
   text-shadow: 2px 5px #00000020;
   position: relative; /* importante para que o z-index funcione */
   z-index: 2; /* botão está na frente do background */
@@ -168,3 +170,4 @@ z-index: 3; /* botão está na frente do background */
   z-index: 3;
   margin-top: 150px;
 }
+
