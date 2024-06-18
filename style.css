@@ -171,3 +171,32 @@ z-index: 3; /* botão está na frente do background */
   margin-top: 150px;
 }
 
+/* Use unidades relativas para definir o tamanho dos elementos */
+.wrapper {
+  width: 80vw; /* 80% do tamanho da tela */
+  height: 80vh; /* 80% do tamanho da tela */
+  padding: 2em; /* padding relativo ao tamanho da tela */
+}
+
+.game-container {
+  display: grid; /* use um sistema de grade flexível */
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+  grid-gap: 1em; /* espaçamento entre as colunas */
+}
+
+.card-container {
+  width: 20vw; /* 20% do tamanho da tela */
+  height: 20vh; /* 20% do tamanho da tela */
+  margin: 1em; /* margem relativa ao tamanho da tela */
+}
+
+/* Use consultas de mídia para aplicar estilos diferentes em telas menores */
+@media only screen and (max-width: 768px) {
+  .game-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais em telas menores */
+  }
+  .card-container {
+    width: 30vw; /* 30% do tamanho da tela em telas menores */
+    height: 30vh; /* 30% do tamanho da tela em telas menores */
+  }
+}
