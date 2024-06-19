@@ -1,54 +1,51 @@
-* {
+ /* Estilos Gerais */
+ * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-color: #bebcf8;
+  overflow: hidden; /* Evita que a página role quando há zoom out */
 }
-
 .wrapper {
-  box-sizing: content-box;
-  width: 26.87em;
+  width: 90vw;
+  max-width: 26.87em; /* Limitar a largura máxima para grandes telas */
   padding: 2.5em 3em;
   background-color: #ededed;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
   border-radius: 0.6em;
   box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.game-container {
-  position: relative;
+.stats-container {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.game-container {
   display: grid;
   gap: 0.6em;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(auto-fit, minmax(6.25em, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(6.25em, 1fr));
 }
-
-
-.stats-container {
-  text-align: right;
-  margin-bottom: 1.2em;
-}
-
-.stats-container span {
-  font-weight: 600;
-}
-
 .card-container {
   position: relative;
-  width: 6.25em;
-  height: 6.25em;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Mantém a proporção quadrada */
   cursor: pointer;
 }
-
-
-.card-before,
-.card-after {
+.card-before, .card-after {
   position: absolute;
   border-radius: 5px;
   width: 100%;
@@ -64,28 +61,21 @@ body {
   background-repeat: no-repeat; 
   background-position: center; 
 }
-
 .card-before {
   background-color: #ededed;
-  /* Adicione o caminho para a imagem da carta de química */
   background-image: url("Parte traseira carta.png");
 }
-
 .card-after {
   background-color: #ffffff;
   transform: rotateY(180deg);
 }
-
 .card-container.flipped .card-before {
   transform: rotateY(180deg);
 }
-
 .card-container.flipped .card-after {
   transform: rotateY(0deg);
 }
-
 .controls-container {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,16 +83,15 @@ body {
   width: 100%;
   height: 100%;
   background-color: #bebcf8;
+  position: absolute;
   top: 0;
 }
-
 button {
   border: none;
   border-radius: 0.3em;
   padding: 1em 1.5em;
   cursor: pointer;
 }
-
 #stop {
   font-size: 1.1em;
   display: block;
@@ -110,36 +99,27 @@ button {
   background-color: #ff0000;
   color: #ffffff;
 }
-
 #start {
   background-color: #4d4d4d;
   color: #ffffff;
-  position: relative; /* importante para que o z-index funcione */
-z-index: 3; /* botão está na frente do background */
 }
-
 .controls-container button {
   font-size: 1.3em;
   box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
 }
-
 .hide {
   display: none;
 }
-
 #result {
   text-align: center;
 }
-
 #result h2 {
   font-size: 3.5em;
   color: #00ff26;
-  margin-top: -147px ;
   text-shadow: 2px 5px #00000020;
-  position: relative; /* importante para que o z-index funcione */
-  z-index: 2; /* botão está na frente do background */
+  position: relative;
+  z-index: 2;
 }
-
 #result h4 {
   position: absolute;
   top: 0;
@@ -150,23 +130,72 @@ z-index: 3; /* botão está na frente do background */
   width: 100vw;
   z-index: 1;
   color: #ff3232;
-  background-image: url("Fundo.jpeg"); /* substitua com o caminho da sua imagem */
+  background-image: url("Fundo.jpeg");
   background-size: cover;
   background-position: center;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #rules {
-  position: absolute; /* Posiciona o elemento absolutamente */
-  top: 0; /* Move o texto para o topo */
-  left: 0; /* Move o texto para a esquerda */
   font-size: 1.2em;
   color: #333;
 }
-#result h6 {
-  color: #00ff26;
-  z-index: 3;
-  margin-top: 150px;
+
+/* Media Queries para Telas Menores */
+@media (max-width: 768px) {
+  .wrapper {
+      padding: 1em;
+  }
+  .game-container {
+      grid-template-columns: repeat(auto-fit, minmax(4.5em, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(4.5em, 1fr));
+      gap: 0.4em;
+  }
+  .card-container {
+      padding-bottom: 100%; /* Mantém a proporção quadrada */
+  }
+  button {
+      font-size: 1em;
+      padding: 0.8em 1em;
+  }
+  #stop {
+      font-size: 1em;
+  }
+  #rules {
+      font-size: 1em;
+  }
+  .stats-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+      width: 100%;
+      max-width: none;
+      padding: 1em;
+  }
+  .game-container {
+      grid-template-columns: repeat(auto-fit, minmax(4em, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(4em, 1fr));
+      gap: 0.3em;
+  }
+  .card-container {
+      padding-bottom: 100%; /* Mantém a proporção quadrada */
+  }
+  button {
+      font-size: 0.8em;
+      padding: 0.5em 0.8em;
+  }
+  #stop {
+      font-size: 0.9em;
+  }
+  #rules {
+      font-size: 0.8em;
+  }
+  .stats-container {
+      flex-direction: column;
+      align-items: center;
+  }
 }
