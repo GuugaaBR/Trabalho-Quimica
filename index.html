@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Jogo Da Memória</title>
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
+  </style>
+</head>
+<body>
     <div class="wrapper">
-      <div class="stats-container">
-        <div id="moves-count"></div>
-        <div id="time"></div>
-      </div>
-      <div class="game-container"></div>
-      <button id="stop" class="hide">Parar</button>
+        <div class="stats-container">
+            <div id="moves-count"></div>
+            <div id="time"></div>
+        </div>
+        <div class="game-container"></div>
+        <button id="stop" class="hide">Parar</button>
     </div>
     <div class="controls-container">
-      <div style="position: relative;"></div>
-      <p id="rules">Regras do Jogo:<br>
-        <br>
-        Regra 1: Quando um jogador levanta um par e acerta, ele obrigatoriamente<br>
-       tem que explicar o porque que elas são um par, caso o contrário o jogador não ganha o ponto.<br>
-        <br>
-        Regra 2: Cada jogador deve levantar somente duas cartas por vez.<br>
-        Caso acerte a dupla correspondente, o jogador terá direito a uma nova jogada.<br>
-      </p>
-      <button id="start">Começar Jogo</button>
-      <p id="result"></p>
+        <p id="rules">Regras do Jogo:<br>
+            <br>
+            Regra 1: Quando um jogador levanta um par e acerta, ele obrigatoriamente<br>
+            tem que explicar o porque que elas são um par, caso o contrário o jogador não ganha o ponto.<br>
+            <br>
+            Regra 2: Cada jogador deve levantar somente duas cartas por vez.<br>
+            Caso acerte a dupla correspondente, o jogador terá direito a uma nova jogada.<br>
+        </p>
+        <button id="start">Começar Jogo</button>
+        <p id="result"></p>
     </div>
-    <!-- Script -->
     <script src="./script.js"></script>
-  </body>
+</body>
 </html>
