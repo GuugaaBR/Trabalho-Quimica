@@ -102,10 +102,7 @@ button {
 #start {
   background-color: #4d4d4d;
   color: #ffffff;
-  position: relative; /* Importante para que o z-index funcione */
-  z-index: 3; /* Botão está na frente do fundo de tela */
 }
-
 .controls-container button {
   font-size: 1.3em;
   box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
