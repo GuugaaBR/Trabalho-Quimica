@@ -26,7 +26,6 @@ const items = [
     { name: "hidrocarboneto16", sprites: ["Ciclobuteno.png", "Ciclobuteno Escrito.png"] },
 ];
 
-
     let cards;
     let firstCard = null;
     let secondCard = null;
