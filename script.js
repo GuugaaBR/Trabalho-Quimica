@@ -36,6 +36,7 @@ const items = [
     { name: "hidrocarboneto16", sprites: ["Ciclobuteno.png", "Ciclobuteno Escrito.png"] },
 ];
 
+  
 
 //Initial Time
 let seconds = 0,
